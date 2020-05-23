@@ -1,1 +1,2073 @@
-//------//
+//===========================================================//
+(function(){
+	var _x012fb15;
+	var x_currentETUser = localStorage.getItem('username');
+	var x_checkETUser = false;
+	var x_authenETUser = '';
+	$.get('https://raw.githubusercontent.com/EVNEVN/gigabet/master/bot_user', function (x_datauser, status) {}).done(function (x_datauser) {
+    x_authenETUser = JSON.parse(x_datauser);
+    for (x_iiiic = 0; x_iiiic < x_authenETUser.length; x_iiiic++)
+        if (x_authenETUser[x_iiiic] == x_currentETUser) x_checkETUser = true;
+    if (x_checkETUser == true) {
+    	try {
+		    var a = localStorage.getItem('access_token'),
+		        b = localStorage.getItem('username');
+		    //if (a.length == 40) {
+		        for (var i = 0; i <= 2; i++)
+		            if (i == 0) a = btoa(a);
+			else a = btoa(a.substring(8, 64));
+		    //prompt("For your account : " + b + "\n" + "Serial Number : ", a.substring(0, 10) + "-" + a.substring(11, 20) + "-" + a.substring(20, 30) + "-" + a.substring(31, 40))
+			//console.log("For your account : " + b + "\n" + "Serial Number : ", a.substring(0, 10) + "-" + a.substring(11, 20) + "-" + a.substring(20, 30) + "-" + a.substring(31, 40))
+			var _x0a9ed57 = ""+(a.substring(0, 10) + "-" + a.substring(11, 20) + "-" + a.substring(20, 30) + "-" + a.substring(31, 40));
+			//console.log(_x0a9ed57);
+		    //}
+		    a = b = undefined
+		} catch {}
+(function(){
+
+var refurl = "999DICE";
+var _1 = btoa("71162498");
+var _2 = btoa("11111111");
+var bet=0, divider=0, minbasebet=0, maxbasebet=0, basebet=0, minbet=0;
+var profit=0, profitt=0, totalprofit=0, series=0, risk=0, chance=0, minchance=0, maxchance=0, minchanceloss=0, maxchanceloss=0, loss=0, loss2=0;
+var balance = getBalance();
+//var balance = Number($('#game--balance').text().trim());
+var lastbalance=balance; 
+var startbalance=balance;
+var oldbalance=balance;
+var sbalance=balance;
+var profitrisk=0, underbalance=0, target=0, lossamount=0, bethigh=0;
+var largestbalance = 0;
+var winstreak=0, losestreak=0, multwin=0, multlose=0;
+var roundwin = 0;
+var roundlose = 0;
+var mininterval=0, maxinterval=0;
+var mintestbet=0, maxtestbet=0, mintestbets=0, maxtestbets=0, testbet=0, testbets=0;
+var maxprofitchange=0, minprofitchange=0;
+var profittt=0, profitttt=0, profitttu=0, profittttu=0;
+var bbalance=0, bbbalance=0;
+var test = true;
+var testb = 0;
+var largbalance = 0;
+var rd_strategy = 0;
+var streakWin=0,streakWinMult=0,streakLose=0,streakLoseMult=0;
+var roundWin = 0;
+var roundLose = 0;
+var resetModeBets = 0;
+var resetModeWins = 0;
+var resetModeLosses = 0;
+var resetModeBetsRound = 0;
+var resetModeWinsRound = 0;
+var resetModeLossesRound = 0;
+console.clear();
+//================================
+var casino=1;
+var payout = 0;
+var targetprofit = 0;
+var targetprofitproc = 0;
+var stopbotafter = 0;
+//================================
+var betid;
+var coin;
+var high, low;
+var sensM=true;
+var chanceM = 0;
+var startTime = new Date();
+var onTime = 0;
+var playTimee = 0;
+var playHourr = 0;
+//var ref = data.user.referredById;
+//var acc = data.user.accountId;
+//var refid = '18091470';
+var id = !1;
+var _start = 0;
+var sessionCookie = getCookie();
+var date = new Date();
+var startdate = date;
+var playTimer = setInterval(function() {
+    playTimeer();
+}, 10000);
+clearInterval(playTimer);
+var playGame = setInterval(function() {
+    playDice();
+}, 100);
+clearInterval(playGame);
+var loss = 0,
+    loss2 = 0,
+    loss3 = 0;
+var cnBalance = 0;
+var waitBet = setInterval(function() {
+    placeBet();
+}, 10000);
+clearInterval(waitBet);
+//var ttt = $('.MyBet').html();
+var infobet = $('#my-bets--content').text();
+var dps = [];
+var chart = '';
+/***
+ttt = $('.MyBet').html();
+    if(game){
+      interval = setInterval(function(){
+        if(t != $('.MyBet').html()) {
+            timeout=(Math.random()*(maxtimeout-mintimeout)+mintimeout)
+            clearInterval(interval);
+            setTimeout(bet, timeout);
+      }
+    }, 10);}
+***/
+var bets = 0;
+var wins = 0;
+var arrBalance = [];
+
+var betAmount = 0;
+var direction = '';
+var startTime = new Date();
+var onTime = 0;
+var playTime = 0;
+var playDay = 0;
+var playHour = 0;
+var playMinute = 0;
+var playSecond = 0;
+var speed = 0;
+var gameResult = 0;
+var wagered = 0;
+var profitWagered = 0;
+var ii = 0;
+var profitHour = 0;
+var profittHour = 0;
+var profitDay = 0;
+var profittDay = 0;
+var loseStreak = 0;
+var winStreak = 0;
+var loseAmount = 0;
+var loseloseAmount = 0;
+var maxloseAmount = 0;
+var maxloseloseAmount = 0;
+var maxWinStreak = 0;
+var maxLoseStreak = 0;
+var maxbetAmount = 0;
+var maxbetbetAmount = 0;
+var largestBetProfit = 0;
+var largestBetBetProfit = 0;
+var minSeries = 0;
+var maxSeries = 0;
+var seriesBet = 0;
+var roundSeries = 0;
+
+function getBalance(){
+var bal=$('#game--balance--top').text();
+	return(parseFloat(bal.replace(',','')));	
+}	
+
+/*
+var rainalert = {};
+rainalert = new Audio();
+rainalert.src = "https://actions.google.com/sounds/v1/alarms/spaceship_alarm.ogg";
+rainalert.volume = 0.5;
+
+function soundz() {
+    rainalert.play()
+}
+$("#ChatTab").bind("DOMSubtreeModified", function() {
+    if ($(this).children(2).children().find('.TextButton').length) {
+        soundz()
+    }
+});
+*/
+
+/*
+var gamealert = {};
+gamealert = new Audio();
+gamealert.src = "http://cd.textfiles.com/10000soundssongs/WAV/CARCRASH.WAV";
+gamealert.volume = 0.5;
+
+function soundy() {
+    gamealert.play()
+}
+*/
+
+function getCookie() {
+    var c = document.cookie;
+    var i = c.indexOf('SessionId=');
+    var cc = c.substring(i + 10, i + 42);
+    return (cc)
+}
+
+function pad(val) {
+    var valString = val + "";
+    if (valString.length < 2) {
+        return "0" + valString
+    } else {
+        return valString
+    }
+}
+
+function currentTime() {
+    var date = new Date();
+    var hours = date.getHours();
+    if (hours < 10) hours = '0' + date.getHours();
+    var minutes = date.getMinutes();
+    if (minutes < 10) minutes = '0' + date.getMinutes();
+    var seconds = date.getSeconds();
+    if (seconds < 10) seconds = '0' + date.getSeconds();
+    var timestr = hours + ':' + minutes + ':' + seconds;
+    $('.localtime').html(timestr)
+}
+
+var style = `<style>
+canvas{
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	-ms-user-select:none
+}
+.boxDice{
+	border:1px solid gold;
+	border-radius:10px;
+	margin-top:3px;
+	padding-bottom:5px;
+	width:530px;
+	background-color:black;
+	color:whitesmoke;
+	font-family:"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	z-index:10;
+	position:absolute;
+	top:0;
+	right:0;
+	opacity: 0.9;
+}
+#autobetbox{
+	//width:1300px;
+	width:1400px;
+	background:#292929;
+	border:1px solid gold;
+	border-radius:10px;
+	padding:10px;
+	margin:5px
+}
+.boxChart{
+	border:1px solid white;
+	border-radius:10px;
+	background-color:transparent;
+	color:whitesmoke;
+	z-index:10;
+	position:absolute;
+	top:0;
+	right:400
+}
+.boxTitle{
+	text-align:center;
+	padding:8px 8px 5px 8px;
+	font-weight:bold;
+	border-bottom:solid#181a1e
+}
+.boxScon{
+	text-align:center;
+	padding:10px 8px 5px 8px;
+	border-bottom:solid#181a1e
+}
+.boxStatus{
+	padding:5px 0;
+	background-color:transparent!important;
+	width:100%;
+//	font-size:12.5px!important;
+	border:0;
+	color:white;
+	text-transform:uppercase;
+	text-align:center
+}
+.boxTDtitle{
+	padding:3px;
+	color:whitesmoke;
+	text-align:center;
+	font-size:16px
+}
+.boxTDDtitle{
+	padding:3px;
+	color:yellow;
+	text-align:center;
+	font-size:16px
+}
+.boxTDDDtitle{
+	padding:3px;
+	color:orange;
+	text-align:center;
+	font-size:16px
+}
+.boxTDDDDtitle{
+	padding:3px;
+	color:OrangeRed;
+	text-align:center;
+	font-size:16px
+}
+.boxTDDDDDtitle{
+	padding:3px;
+	color:Violet;
+	text-align:center;
+	font-size:16px
+}
+.boxTDinput{
+	padding:3px;
+	background-color:#8A9BAA;
+	width:97%;
+	border:1px solid white;
+	border-radius:10px;
+	text-aligh:center;
+	color:white!important;
+	margin:2px 0
+}
+.boxDS{
+	padding:3px;
+	//width:100px;
+	width:130px;
+	//width:0px;
+	align: center;
+}
+.boxDSS{
+	//border:1px solid yellow;
+	padding:3px;
+	width:100px;
+	align: center;
+	//color:gold;
+}
+.boxDSSS{
+	//border:1px solid orange;
+	padding:3px;
+	width:100px;
+	align: center;
+	//color:gold;
+}
+.boxWinLose{
+	padding:6px;
+	text-align:center;
+	font-size:11px!important
+}
+.boxWLinput{
+	padding:3px;
+	text-align:center;
+	background-color:#2e323b!important;
+	width:97%;
+	border:0;
+	margin:3px 0
+}
+.boxWin{
+	color:greenyellow!important
+}
+.boxLose{
+	color:red!important
+}
+.boxBalance{
+	color:white!important;
+	font-size:9.5px!important
+}
+.boxButton{
+	width:80%;
+	background-color:#46B9D8;
+	border:1px solid white;
+	border-radius:10px;
+	color:white;
+	padding:7px 15px;
+	margin-left:10px;
+	text-align:center;
+	text-decoration:none;
+	display:inline-block;
+	font-size:13px
+}
+.localtime{
+	float:right!important;
+	font-size:16px!important;
+	font-weight:bold;
+	color:yellow!important
+}
+#refurl{
+	font-size:18px!important;
+	color:yellow!important
+}
+#_playtime{
+//	float:right!important;
+	font-size:16px!important;
+	font-weight:bold;
+	text-align: center;
+	color:yellow!important
+}
+#_totalprofit{
+	background-color:black;
+	font-color:white;
+	font-size:16px;
+	font-weight:bold;
+	text-align:center
+}
+#chartArea{
+	width:800px;
+	heigth:200px;
+	background-color:transparent;
+	border:1px solid white;
+	border-radius:10px
+}
+#_start{
+	//width:75px;
+	color:green;
+	font-weight:bold
+}
+#_reset{
+	//width:75px;
+	color:black;
+	font-weight:bold
+}
+.InputBox{
+	width: 120px;
+}
+input[type=number], input[type=password], input[type=text], select, textarea {
+    padding: 10px;
+    width: 100%;
+    //width: 130px;
+    background-color: #f9f9f9;
+    color: #888;
+    font-size: 18px;
+    font-weight: 400;
+}
+.TextButton{
+	//border-radius:0px;
+	border:1px solid gold;
+	border-radius:3px;
+    width:auto;
+    font-weight:bold;
+    font-size:20px;
+    background-color:yellow;
+}
+.BetButton{
+	//border-radius:0px;
+	border:1px solid gold;
+}
+.click{
+	border:0;
+	//box-shadow: inset 0 0 12px #49DA31, 0 0 12px #0D0D0D;
+	box-shadow: inset 0 0 12px gold, 0 0 12px #0D0D0D;
+}
+.tdLabel{
+	//width: 33.3%;
+	text-align:center;
+	font-size:16px;
+}
+#coin{
+	font-size: 20px;
+	color: #F18C18;
+}	
+[type=checkbox]:checked, [type=checkbox]:not(:checked) {
+    position: relative;
+    left: 0px;
+}
+#_status{
+background:black;	
+font-family: Garamond, serif;
+line-height: 1em;
+color: #009000;
+font-weight:bold;
+font-size: 28px;
+text-shadow:0px 0px 0 rgb(-92,36,-92),1px 1px 0 rgb(-137,-9,-137), 2px 2px 0 rgb(-182,-54,-182),3px 3px 2px rgba(0,0,0,0.6),3px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
+}
+/style>`;
+//var chrt = atob("PGRpdiBjbGFzcz0iYm94Q2hhcnQiPjxjZW50ZXI+PGRpdiBpZD0iY2hhcnRBcmVhIiB3aWR0aD0iODIwIiBoZWlnaHQ9IjIwMCI+PC9kaXY+PC9jZW50ZXI+PC9kaXY+");
+var html = `<center><div id="autobetbox">
+	<table width="100%"border="0"cellspacing="0"cellpadding="5">
+		<!--div class="boxScon"><span id="coin"></span><span class="boxStatus"type="text"id="_status">0.00000000 [0.00%]</span></div-->
+		<div class="boxScon"><span class="boxStatus"type="text"id="_status">0.00000000 [0.00%]</span></div>
+			<tbody>
+			<tr>
+				<td class="boxTDtitle">DividerBalance</td>
+				<td class="boxTDtitle">MinBaseBet</td>
+				<td class="boxTDtitle">MaxBaseBet</td>
+				<td class="boxTDtitle">MinChanceWin</td>
+				<td class="boxTDtitle">MaxChanceWin</td>
+				<td class="boxTDtitle">MinChanceLoss</td>
+				<td class="boxTDtitle">MaxChanceLoss</td>
+				<td class="boxTDtitle">BalanceUnder</td>
+				<td class="boxTDtitle">BalanceOver</td>
+				<td class="boxTDtitle">BalanceRisk,%</td>
+			</tr>
+			<tr>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="divider"value="0"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="minbasebet"value="0.00000001"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="maxbasebet"value="0.00000001"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="minchance"value="1"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="maxchance"value="98"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="minchanceloss"value="1"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="maxchanceloss"value="98"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="underbalance"value="0.00000000"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="_target"value="0.00000000"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="_risk"value="100"></td>
+			</tr>
+			<tr>
+				<td class="boxTDtitle">MinTestBet</td>
+				<td class="boxTDtitle">MaxTestBet</td>
+				<td class="boxTDtitle">MinTestBets</td>
+				<td class="boxTDtitle">MaxTestBets</td>
+				<td class="boxTDtitle">MinInterval,ms</td>
+				<td class="boxTDtitle">MaxInterval,ms</td>
+				<td class="boxTDtitle">ProfitOver</td>
+				<td class="boxTDtitle">ProfitOver,%</td>
+				<td class="boxTDtitle">ProfitRisk,%</td>
+				<td class="boxTDtitle">StopBotAfter,h</td>
+			</tr>	
+			<tr>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="mintestbet"value="0.00000000"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="maxtestbet"value="0.00000000"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="mintestbets"value="0"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="maxtestbets"value="0"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="mininterval"value="1000"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="maxinterval"value="3000"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="targetprofit"value="0.00000000"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="targetprofitproc"value="0.000"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="casino"value="1.00"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="stopbotafter"value="0.00"></td>
+			</tr>
+			<tr>
+				<td style="padding:3px; font-size:16px; text-align: center;" id="lowPlay" class="checked"><input type="radio" name="hiLow" id="radio9" checked="checked"/>&nbsp;<label for="radio9">Low</label></td>
+				<td style="padding:3px; font-size:16px; text-align: center;" id="hiPlay"><input type="radio" name="hiLow" id="radio5"/>&nbsp;<label for="radio5">High</label></td>
+				<td style="padding:3px; font-size:16px; text-align: center;" id="randomonlosePlay"><input type="radio" name="hiLow" id="radio6"/>&nbsp;<label for="radio6">OnLose</label></td>
+				<td style="padding:3px; font-size:16px; text-align: center;" id="randomonwinPlay"><input type="radio" name="hiLow" id="radio10"/>&nbsp;<label for="radio10">OnWin</label></td>
+				<td style="padding:3px; font-size:16px; text-align: center;" id="randomPlay"><input type="radio" name="hiLow" id="radio7"/>&nbsp;<label for="radio7">Random</label></td>
+				<td style="padding:3px; font-size:16px; text-align: center;" id="slowrandomPlay"><input type="radio" name="hiLow" id="radio8"/>&nbsp;<label for="radio8">SlowRand</label></td>
+				<td style="padding:3px; font-size:16px; text-align: center;" id="intellectPlay"><input type="radio" name="hiLow" id="radio11"/>&nbsp;<label for="radio11">Intellect</label></td>
+				<td style="padding:3px; font-size:16px; text-align: center;" id="zigzagPlay"><input type="radio" name="hiLow" id="radio12"/>&nbsp;<label for="radio12">ZigZag</label></td>
+				<!--td class="boxTDDtitle">=============</td-->
+				<td style="font-size:16px; color:yellow; text-align:center;"><span id="activemode">(---)</span></td>
+				<td class="boxTDDtitle">+Profit,%</td>
+				<!--td style="font-size:16px; color:yellow; text-align:center;"><span id="profitplus">...</span>/<span id="notif_profitover">0.000</span></td-->
+				<!--td class="boxTDDtitle">-Profit,%</td-->
+				<!--td style="font-size:16px; color:yellow; text-align:center;"><span id="profitminus">...</span>/<span id="notif_profitunder">0.000</span></td-->
+			</tr>
+			<tr>
+				<td><center><input class="StandardCheckBox pimp" id="safeD" style="font-size:16px; text-align: center;" type="checkbox" checked="checked"><span style="padding:3px; font-size:16px; color: yellow; text-align: center;" id="safe" class="checked"><input type="radio" name="playmode" id="radio1" checked="checked"/>&nbsp;<label for="radio1">Safe</label></span></td>
+				<td><center><input class="StandardCheckBox pimp" id="optimal1D" style="font-size:16px; text-align: center;" type="checkbox" checked="checked"><span style="padding:3px; font-size:16px; color: yellow; text-align: center;" id="optimal1"><input type="radio" name="playmode" id="radio2"/>&nbsp;<label for="radio2">Optimal,1</label></span></td>
+				<td><center><input class="StandardCheckBox pimp" id="optimal2D" style="font-size:16px; text-align: center;" type="checkbox" checked="checked"><span style="padding:3px; font-size:16px; color: yellow; text-align: center;" id="optimal2"><input type="radio" name="playmode" id="radio13"/>&nbsp;<label for="radio13">Optimal,2</label></span></td>
+				<td><center><input class="StandardCheckBox pimp" id="normalD" style="font-size:16px; text-align: center;" type="checkbox" checked="checked"><span style="padding:3px; font-size:16px; color: yellow; text-align: center;" id="normal"><input type="radio" name="playmode" id="radio4"/>&nbsp;<label for="radio4">Normal</label></span></td>
+				<td><center><input class="StandardCheckBox pimp" id="riskD" style="font-size:16px; text-align: center;" type="checkbox" checked="checked"><span style="padding:3px; font-size:16px; color: yellow; text-align: center;" id="risk"><input type="radio" name="playmode" id="radio3"/>&nbsp;<label for="radio3">Risk</label></span></td>
+				<td><center><input class="StandardCheckBox pimp" id="manualD" style="font-size:16px; text-align:center;" type="checkbox" checked="checked"><span style="padding:3px; font-size:16px; color:OrangeRed; text-align:center;" id="manual"><input type="radio" name="playmode" id="radio16"/>&nbsp;<label for="radio16">Manual</label></span></td>
+				<td><center><input class="StandardCheckBox pimp" id="seriesD" style="font-size:16px; text-align:center;" type="checkbox" checked="checked"><span style="padding:3px; font-size:16px; color:Violet; text-align:center;" id="series"><input type="radio" name="playmode" id="radio17"/>&nbsp;<label for="radio17">Series</label></span></td>
+				<td style="padding:3px; font-size:16px; color:orange; text-align:center;" id="random"><input type="radio" name="playmode" id="radio14"/>&nbsp;<label for="radio14">Random</label></td>
+				<td style="padding:3px; font-size:16px; color:yellow; text-align:center;" id="randomsafe"><input type="radio" name="playmode" id="radio15"/>&nbsp;<label for="radio15">Random-Safe</label></td>
+				<td class="boxDSS"><input class="StandardTextBox InputBox"type="text"id="maxprofitchange"value="0.0010"></td>
+				<!--td class="boxDSS"><input class="StandardTextBox InputBox"type="text"id="minprofitchange"value="-0.0010"></td-->
+			</tr>
+			<tr>
+				<td class="boxTDDDDtitle">WinStreak</td>
+				<td class="boxTDDDDtitle">WinMultiplier</td>
+				<td class="boxTDDDDtitle">LoseStreak</td>
+				<td class="boxTDDDDtitle">LossMultiplier</td>
+				<td class="boxTDDDtitle">+Bets</td>
+				<td class="boxTDDDtitle">+Wins</td>
+				<td class="boxTDDDtitle">+Losses</td>
+				<!--td class="boxTDDtitle">ActiveMode</td-->
+				<td class="boxTDDDDDtitle">MinSeries</td>
+				<td class="boxTDDDDDtitle">MaxSeries</td>
+				<td class="boxTDDtitle">-Profit,%</td>
+				<!--td style="font-size:16px; color:yellow; text-align:center; border:1px solid yellow;"><span id="notif_profitover">0.00000000</span></td-->
+				<!--td style="font-size:16px; color:yellow; text-align:center; border:1px solid yellow;"><span id="notif_profitunder">0.00000000</span></td-->
+			</tr>
+			<tr>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="streakWin"value="1"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="streakWinMult"value="1.00"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="streakLose"value="1"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="streakLoseMult"value="1.00"></td>
+				<td class="boxDSSS"><input class="StandardTextBox InputBox"type="text"id="resetModeBets"value="10"></td>
+				<td class="boxDSSS"><input class="StandardTextBox InputBox"type="text"id="resetModeWins"value="10"></td>
+				<td class="boxDSSS"><input class="StandardTextBox InputBox"type="text"id="resetModeLosses"value="10"></td>
+				<!--td style="font-size:16px; color:yellow; text-align:center;"><span id="activemode">---</span></td-->
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="minSeries"value="1"></td>
+				<td class="boxDS"><input class="StandardTextBox InputBox"type="text"id="maxSeries"value="10"></td>
+				<td class="boxDSS"><input class="StandardTextBox InputBox"type="text"id="minprofitchange"value="-0.0010"></td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<div id="static" style="font-size: 16px;">...</div>
+	<br>
+	<div id="chart" style="height: 160px;border: 2 solid #181a1e;"></div>	
+	<!--div id="chart" style="height:160px; border:1px solid yellow;"></div-->	
+	<table width="100%" border="0" cellspacing="0" cellpadding="5">		
+		<tr>		
+				<td class="boxTDDtitle">=========================================</td>
+				<td class="boxTDtitle">PlayTime</td>
+				<td align="center"><span id="_playtime" >00:00:00</span></td>
+
+				<!--td align="center"><input type="button" id="_start"class="TextButton">START</input></td-->
+				<td class="tdLabel"><input type = "button" id="_start" class="btns--bet" margin="10px" value="START"></input></td>
+
+				<!--td align="center"><input type="button" id="_reset"class="TextButton">RESET</input></td-->
+				<td class="tdLabel"><input type = "button" id="_reset" class="btns--bet" margin="10px" value="RESET"></input></td>
+		</tr>		
+      </tbody>
+   </table>   
+</div></center>`;
+$('head').append(style);
+//$('body').append(html);
+$('.game__container').append(html);
+//$('.game__row')[1].id="gameset";
+//$('#gameset').after(html);
+document.getElementById('btn--bet').style.display='none';
+var timerTask, totalSeconds = 0,
+    timerBox = document.querySelector('#timerBetting');
+//$('#refurl').html(refurl);
+//$('#notif').html('*To disable DividerBalance: DividerBalance = 0;');
+//$('#notif').css('padding', '5px');
+//$('body').append(chrt);
+$('#maxprofitchange').css('color', 'yellow');
+$('#minprofitchange').css('color', 'yellow');
+$('#profitplus').html('+Profit,%');
+$('#profitminus').html('-Profit,%');
+$('#streakWin').css('color', 'OrangeRed');
+$('#streakWinMult').css('color', 'OrangeRed');
+$('#streakLose').css('color', 'OrangeRed');
+$('#streakLoseMult').css('color', 'OrangeRed');
+$('#resetModeBets').css('color', 'orange');
+$('#resetModeWins').css('color', 'orange');
+$('#resetModeLosses').css('color', 'orange');
+$('#minSeries').css('color', 'Violet');
+$('#maxSeries').css('color', 'Violet');
+/*
+if(_x012fb15==_x0a9ed57){
+}else{
+	$("#container").remove();
+	style=undefined;
+	html=undefined;
+	alert('You do not have permission to use this bot! Contact the developer!');
+	window.open('https://www.youtube.com/channel/UCxD_rH3cgWkuKCEL2TFhYiQ?view_as=subscriber');
+	window.open('https://cos.tv/home/dist/personal.html#/creation?uid=16516022185142272');
+	//window.location.reload();
+	location.reload();
+}
+*/
+$.getScript('https://canvasjs.com/assets/script/canvasjs.min.js').done(function (script, textStatus) {
+	dps = [{
+			x: 0,
+			y: 0
+		}
+	];
+	chart = new CanvasJS.Chart('chart', {
+			backgroundColor: "transparent",
+			theme: 'dark2',
+			zoomEnabled: true,
+			axisX: {
+				title: 'Bets',
+				includeZero: false,
+			},
+			axisY: {
+				title: 'Profit',
+				includeZero: false,
+			},
+			title: {
+				//text: 'Space X',
+				fontColor: '#2eab5b',
+				fontSize: 2e1,
+				padding: 2e1
+			},
+			data: [{
+				type: 'area',
+				color: "gold",
+				dataPoints: dps
+				}
+			]
+		});
+	chart.render();
+});
+function updateChart(bets,profit, color) {
+	dps.push({
+		x: bets,
+		y: balance-startbalance,
+		color: color
+	});
+	if (dps[dps.length - 2]) {
+		dps[dps.length - 2].lineColor = color;
+	}
+	if (dps.length > 1e2) {
+		dps.shift();
+	}
+	chart.render();
+}
+
+//setInterval('currentTime()', 10);
+
+/*
+setInterval('currentTime()', 10);
+var box_position, offsetBox = [0, 0],
+    isDrag = false,
+    source, dynamic;
+source = document.getElementsByClassName('boxDice')[0];
+dynamic = document.getElementById('isDynamic');
+dynamic.addEventListener('mousedown', function(e) {
+    isDrag = true;
+    offsetBox = [source.offsetLeft - e.clientX, source.offsetTop - e.clientY]
+}, true);
+document.addEventListener('mouseup', function() {
+    isDrag = false
+}, true);
+document.addEventListener('mousemove', function(event) {
+    if (isDrag) {
+        box_position = {
+            x: event.clientX,
+            y: event.clientY
+        };
+        source.style.left = (box_position.x + offsetBox[0]) + 'px';
+        source.style.top = (box_position.y + offsetBox[1]) + 'px'
+    }
+}, true);
+
+var timerTask, totalSeconds = 0,
+    timerBox = document.querySelector('#timerBetting');
+
+function setTime() {
+    ++totalSeconds;
+    timerBox.textContent = pad(parseInt(totalSeconds / 60)) + ':' + pad(totalSeconds % 60)
+}
+
+function pad(val) {
+    var valString = val + "";
+    if (valString.length < 2) {
+        return "0" + valString
+    } else {
+        return valString
+    }
+}
+
+function getDir() {
+    var rad = document.getElementsByName('dir');
+    var d = 0;
+    for (var i = 0; i < rad.length; i++) {
+        if (rad[i].checked) {
+            d = i
+        }
+    }
+    return d
+}
+*/
+
+$('.pimp').click(function() {
+	if($('#safeD').is(":checked")){
+		$("#radio1").removeAttr("disabled");
+	}else{
+		$("#radio1").attr("disabled", true);
+	}
+});
+$('.pimp').click(function() {
+	if($('#optimal1D').is(":checked")){
+		$("#radio2").removeAttr("disabled");
+	}else{
+		$("#radio2").attr("disabled", true);
+	}
+});
+$('.pimp').click(function() {
+	if($('#optimal2D').is(":checked")){
+		$("#radio13").removeAttr("disabled");
+	}else{
+		$("#radio13").attr("disabled", true);
+	}
+});
+$('.pimp').click(function() {
+	if($('#normalD').is(":checked")){
+		$("#radio4").removeAttr("disabled");
+	}else{
+		$("#radio4").attr("disabled", true);
+	}
+});
+$('.pimp').click(function() {
+	if($('#riskD').is(":checked")){
+		$("#radio3").removeAttr("disabled");
+	}else{
+		$("#radio3").attr("disabled", true);
+	}
+});
+$('.pimp').click(function() {
+	if($('#manualD').is(":checked")){
+		$("#radio16").removeAttr("disabled");
+	}else{
+		$("#radio16").attr("disabled", true);
+	}
+});
+$('.pimp').click(function() {
+	if($('#seriesD').is(":checked")){
+		$("#radio17").removeAttr("disabled");
+	}else{
+		$("#radio17").attr("disabled", true);
+	}
+});
+/*
+function highLowSet() {
+    if ($('#radio9').is(':checked')) {
+        bethigh = false;
+    }
+    if ($('#radio5').is(':checked')) {
+        bethigh = true;
+    }
+    if ($('#radio7').is(':checked')) {
+        if (Math.random() < 0.5) {
+            bethigh = false;
+        } else {
+            bethigh = true;
+        }
+    }
+    if ($('#radio10').is(':checked')) {
+        if (parseFloat($('#LastBetInfoProfit').html()) >= 0) {
+	    if (Math.random() < 0.5) {
+            	bethigh = false;
+            } else {
+            	bethigh = true;
+            }
+		}
+    }
+    if ($('#radio6').is(':checked')) {
+        if (parseFloat($('#LastBetInfoProfit').html()) < 0) {
+	    if (Math.random() < 0.5) {
+            	bethigh = false;
+            } else {
+            	bethigh = true;
+            }
+		}
+    }
+    var lastnum = parseFloat(document.getElementById("LastBetInfoSecret").innerText) / 10000;
+    if ($('#radio11').is(':checked')) {
+        if (lastnum > 49.95) {
+            bethigh = false;
+        } else {
+            bethigh = true;
+        }
+    }
+    if ($('#radio12').is(':checked')) {
+        if (bethigh == false) {
+            bethigh = true;
+        } else if (bethigh == true) {
+            bethigh = false;
+        }
+    }
+    if ($('#radio8').is(':checked')) {
+    	var rdhighlow = Math.floor((Math.random() * (5 - 1 + 1)) + 1);
+		if (rdhighlow == 1) {
+			bethigh = true;
+		} else {
+			bethigh = false;
+		}
+    }
+};
+*/
+/*
+var rd = Math.floor((Math.random() * (2 - 1 + 1)) + 1);
+	if (rd == 1) {
+		bethigh = true;
+	} else {
+		bethigh = false;
+	}
+*/
+/*
+$('.BetButton').click(function() {
+        go = $(this), go.toggleClass('click');
+        setTimeout("go.toggleClass('click')", 1000);
+});
+*/
+
+function _x0fe2da8() {
+	var currentETUser = localStorage.getItem('username');
+	var checkETUser = false;
+	var authenETUser = '';
+	$.get('https://raw.githubusercontent.com/EVNEVN/gigabet/master/bot_user', function (datauser, status) {}).done(function (datauser) {
+    authenETUser = JSON.parse(datauser);
+    for (iiii = 0; iiii < authenETUser.length; iiii++)
+        if (authenETUser[iiii] == currentETUser) checkETUser = true;
+    if (checkETUser == true) {
+    		
+    	}else{
+    		clearInterval(playInt);
+			clearInterval(waitBet);
+			clearInterval(playTimer);
+			alert('You do not have permission to use, contact the developer!');
+			window.open('https://www.youtube.com/channel/UCxD_rH3cgWkuKCEL2TFhYiQ?view_as=subscriber');
+			window.open('https://cos.tv/home/dist/personal.html#/creation?uid=16516022185142272');
+			window.location.reload();
+		}
+	});
+}
+_x0fe2da8();
+
+//function startDice() {
+$('#_start').click(function() {
+	//if (data.user.accountId == "71162498" || data.user.accountId == "11111111"){
+    //if (u()) _start = !_start;
+    _start = !_start;
+    if (!_start) {
+        //$('#_start').text("START");
+        $('#_start').val("START");
+        $('#_start').css('color', 'green');
+        betting = 0;
+        clearInterval(playTimer);
+        clearInterval(playGame);
+        clearInterval(waitBet);
+        _x0fe2da8();
+        //u();
+        return
+    } else {
+        //$('#_start').text("STOP");
+        $('#_start').val("STOP");
+        $('#_start').css('color', 'red');
+        document.getElementsByTagName('button')[33].click();
+        //startdate = new Date();
+        //startTime = new Date();
+        playTimer = setInterval(function() {
+    		playTimeer();
+		}, 100);
+        //balance = parseFloat($('.UserBalance')[0].innerHTML);
+        divider = parseFloat($('#divider').val());
+        minbasebet = parseFloat($('#minbasebet').val());
+        if(divider == 0){
+        	maxbasebet = parseFloat($('#maxbasebet').val());
+        }else{
+			maxbasebet = balance/divider;
+			$('#maxbasebet').val(maxbasebet.toFixed(8));
+        }
+		basebet = (Math['random']() * (maxbasebet - minbasebet) + minbasebet);
+        casino = parseFloat($('#casino').val());
+        targetprofit = parseFloat($('#targetprofit').val());
+        targetprofitproc = parseFloat($('#targetprofitproc').val());
+        minchance = parseFloat($('#minchance').val());
+        maxchance = parseFloat($('#maxchance').val());
+        minchanceloss = parseFloat($('#minchanceloss').val());
+        maxchanceloss = parseFloat($('#maxchanceloss').val());
+        underbalance = parseFloat($('#underbalance').val());
+        target = parseFloat($('#_target').val());
+        risk = parseFloat($('#_risk').val());
+	//winstreak = parseFloat($('#winstreak').val());
+	//losestreak = parseFloat($('#losestreak').val());
+	//multwin = parseFloat($('#multwin').val());
+	//multlose = parseFloat($('#multlose').val());
+	mintestbet = parseFloat($('#mintestbet').val()); 
+	maxtestbet = parseFloat($('#maxtestbet').val()); 
+	testbet = (Math['random']() * (maxtestbet - mintestbet) + mintestbet);
+	mintestbets = parseFloat($('#mintestbets').val()); 
+	maxtestbets = parseFloat($('#maxtestbets').val()); 
+	testbets = Math.floor(Math['random']() * (maxtestbets - mintestbets) + mintestbets);
+	mininterval = parseFloat($('#mininterval').val()); 
+	maxinterval = parseFloat($('#maxinterval').val());
+	maxprofitchange = parseFloat($('#maxprofitchange').val());
+	minprofitchange = parseFloat($('#minprofitchange').val());
+	if(minprofitchange >= 0) minprofitchange = -0.0001;
+	streakWin = parseFloat($('#streakWin').val());
+	streakWinMult = parseFloat($('#streakWinMult').val());
+	streakLose = parseFloat($('#streakLose').val());
+	streakLoseMult = parseFloat($('#streakLoseMult').val());
+	resetModeBets = parseFloat($('#resetModeBets').val());
+	resetModeWins = parseFloat($('#resetModeWins').val());
+	resetModeLosses = parseFloat($('#resetModeLosses').val());
+	stopbotafter = parseFloat($('#stopbotafter').val());
+	minSeries = parseFloat($('#minSeries').val());
+	maxSeries = parseFloat($('#maxSeries').val());
+	seriesBet = Math.floor((Math.random() * (maxSeries - minSeries + 1)) + minSeries);
+	/*
+	profittt = 0; 
+	profitttt = 0;
+	profitttu = 0; 
+	profittttu = 0;
+	testb = 0;
+	roundWin = 0;
+	roundLose = 0;
+	resetModeBetsRound = 0;
+	resetModeWinsRound = 0;
+	resetModeLossesRound = 0;
+	*/
+        //series = parseFloat($('#_series').val());
+	chance = (Math['random']() * (maxchance - minchance) + minchance);
+	chanceM = maxchance;
+	/*
+        arrBalance = [];
+        startbalance = balance;
+        lastbalance = balance;
+        oldbalance = balance;
+        sbalance = balance;
+        bbalance = balance;
+        bbbalance = balance;
+        largbalance = balance;
+	*/
+		minbet = Math.round(100/(100-chance))/100000000;
+		if(minbet < 0.00000001) minbet = 0.00000001;
+		if(basebet < minbet) basebet = minbet;
+		if(testbet < minbet) testbet = minbet;
+        //bet = basebet;
+        if (mintestbet != 0 && maxtestbet != 0 && mintestbets != 0 && maxtestbets != 0) {
+			test = true;
+			bet = testbet;
+		}else{
+			test = false;
+			bet = basebet;
+		}
+		/*
+		WageredB = 0;
+		ProfitB = 0;
+		perte = 0;
+        loss = 0;
+        loss2 = 0;
+        loss3 = 0;
+        bets = 0;
+        wins = 0;
+		profit = 0;
+		lossamount = 0;
+		profitt = 0;
+		*/
+		rd_strategy = Math.floor((Math.random() * (7 - 1 + 1)) + 1);
+		calcul_profit("chance", e = !1);
+		updateChart(bets,profit, 'gold');
+	playGame = setInterval(function() {
+    		playDice();
+	}, (Math['random']() * (maxinterval - mininterval) + mininterval));
+        //coin = $(".CurrencyName")[0].innerText.toLowerCase();
+		//$('#_status').html('Balance ' + balance.toFixed(8) + ' ' + coin);
+        betting = true;
+		bethigh = true;
+		//sensM = true;
+		betAmount = bet;
+		direction = 'high';
+		/*
+		startTime = new Date();
+		onTime = 0;
+		playTime = 0;
+		playDay = 0;
+		playHour = 0;
+		playMinute = 0;
+		playSecond = 0;
+		speed = 0;
+		wagered = 0;
+		profitWagered = 0;
+		ii = 0;
+		profitHour = 0;
+		profittHour = 0;
+		profitDay = 0;
+		profittDay = 0;
+		loseStreak = 0;
+		winStreak = 0;
+		loseAmount = 0;
+		loseloseAmount = 0;
+		maxloseAmount = 0;
+		maxloseloseAmount = 0;
+		maxWinStreak = 0;
+		maxLoseStreak = 0;
+		maxbetAmount = 0;
+		maxbetbetAmount = 0;
+		largestBetProfit = 0;
+		largestBetBetProfit = 0;
+		*/
+		/*
+	dps = [{
+			x: 0,
+			y: 0
+		}
+	];
+	chart = new CanvasJS.Chart('chart', {
+			backgroundColor: "transparent",
+			theme: 'dark2',
+			zoomEnabled: true,
+			axisX: {
+				title: 'Bets',
+				includeZero: false,
+			},
+			axisY: {
+				title: 'Profit',
+				includeZero: false,
+			},
+			title: {
+				//text: 'Space X',
+				fontColor: '#2eab5b',
+				fontSize: 2e1,
+				padding: 2e1
+			},
+			data: [{
+				type: 'area',
+				color: "gold",
+				dataPoints: dps
+				}
+			]
+		});
+	chart.render();
+	*/
+
+	if(_x012fb15==_x0a9ed57){
+	}else{
+		$("#container").remove();
+		style=undefined;
+		html=undefined;
+		alert('You do not have permission to use this bot! Contact the developer!');
+		window.open('https://www.youtube.com/channel/UCxD_rH3cgWkuKCEL2TFhYiQ?view_as=subscriber');
+		window.open('https://cos.tv/home/dist/personal.html#/creation?uid=16516022185142272');
+		//window.location.reload();
+		location.reload();
+	}
+
+		_x0fe2da8();
+        placeBet();
+        //u();
+    }
+    /*
+    } else { 
+    	clearInterval(playGame);
+        alert('you do not have permission to use, contact the developer!')
+		window.open('https://www.youtube.com/channel/UCI_HpN0R1GB9sZsVb1EqV-Q?view_as=subscriber');
+		window.location.reload();
+	}
+	*/
+});
+
+$('#_reset').click(function() {
+	startdate = new Date();
+    startTime = new Date();
+    balance = getBalance();
+    //balance = Number($('#game--balance').text().trim());
+    profittt = 0; 
+	profitttt = 0;
+	profitttu = 0; 
+	profittttu = 0;
+	testb = 0;
+	roundWin = 0;
+	roundLose = 0;
+	resetModeBetsRound = 0;
+	resetModeWinsRound = 0;
+	resetModeLossesRound = 0;
+	arrBalance = [];
+    startbalance = balance;
+    lastbalance = balance;
+    oldbalance = balance;
+    sbalance = balance;
+    bbalance = balance;
+    bbbalance = balance;
+    largbalance = balance;
+    WageredB = 0;
+	ProfitB = 0;
+	perte = 0;
+    loss = 0;
+    loss2 = 0;
+    loss3 = 0;
+    bets = 0;
+    wins = 0;
+	profit = 0;
+	lossamount = 0;
+	profitt = 0;
+	startTime = new Date();
+	onTime = 0;
+	playTime = 0;
+	playDay = 0;
+	playHour = 0;
+	playMinute = 0;
+	playSecond = 0;
+	speed = 0;
+	wagered = 0;
+	profitWagered = 0;
+	ii = 0;
+	profitHour = 0;
+	profittHour = 0;
+	profitDay = 0;
+	profittDay = 0;
+	loseStreak = 0;
+	winStreak = 0;
+	loseAmount = 0;
+	loseloseAmount = 0;
+	maxloseAmount = 0;
+	maxloseloseAmount = 0;
+	maxWinStreak = 0;
+	maxLoseStreak = 0;
+	maxbetAmount = 0;
+	maxbetbetAmount = 0;
+	largestBetProfit = 0;
+	largestBetBetProfit = 0;
+	seriesBet = 0;
+	roundSeries = 0;
+	dps = [{
+			x: 0,
+			y: 0
+		}
+	];
+	chart = new CanvasJS.Chart('chart', {
+			backgroundColor: "transparent",
+			theme: 'dark2',
+			zoomEnabled: true,
+			axisX: {
+				title: 'Bets',
+				includeZero: false,
+			},
+			axisY: {
+				title: 'Profit',
+				includeZero: false,
+			},
+			title: {
+				//text: 'Space X',
+				fontColor: '#2eab5b',
+				fontSize: 2e1,
+				padding: 2e1
+			},
+			data: [{
+				type: 'area',
+				color: "gold",
+				dataPoints: dps
+				}
+			]
+		});
+	chart.render();
+	$('#static').html('...');
+	$('#activemode').html('(---)');
+	$('#activemode').css('color', 'yellow');
+	$('#_status').html('0.00000000 [0.00%]');
+	$('#_status').css('color', 'green');
+	$('#notif_profitover').html('0.00000000');
+	$('#notif_profitunder').html('0.00000000');
+});
+
+function playDice() {
+	//if (data.user.accountId == "71162498" || data.user.accountId == "11111111"){
+    if (balance != getBalance() || infobet != $('#my-bets--content').text()) {
+        clearInterval(waitBet);
+        waitBet = setInterval(function() {
+            placeBet();
+        }, maxinterval+10000);
+        //if (coin === $(".CurrencyName")[0].innerText.toLowerCase()) {
+	    //betid = parseFloat($('#LastBetInfoSecret').html());
+	    profit = getBalance() - balance;
+            balance = getBalance();
+            infobet = $('#my-bets--content').text();
+	    //ttt = $('.MyBet').html();
+            //profit = parseFloat($('#LastBetInfoProfit').html());
+            totalprofit = balance - sbalance;
+            var pre = '' + (100 * (balance - sbalance) / sbalance).toFixed(2);
+            var profitproc = (100 * (balance - sbalance) / sbalance);
+            var pr = (balance - sbalance).toFixed(8);
+			//var coins = $(".CurrencyName")[0].innerText + '  ';
+			//$('#coin').text(coins);
+            $("#_status").text('  '+pr.toString() +' [' + pre + '%]');
+            if (pr < 0) $("#_status").css('color', 'red');
+            else $("#_status").css('color', 'green');
+	    //$("#BetProfitLabel").text(''+pr.toString() +' [' + pre + '%]');
+        //    if (pr < 0) $("#BetProfitLabel").css('color', 'red');
+        //    else $("#BetProfitLabel").css('color', 'green');
+
+//            $('#_totalprofit').html(totalprofit.toFixed(8));
+//            if (totalprofit < 0) $('#_totalprofit').css('color', 'red');
+//            else $('#_totalprofit').css('color', 'green');
+			onTime = new Date().getTime();
+			playTimee = onTime - startTime;
+			playHourr = (playTimee / (1e3 * 6e1 * 6e1 * 24))*24;
+			bets++;
+            updateChart(bets,balance, 'gold');
+	    if (balance>=largestbalance) largestbalance=balance;
+	    //if (balance >= lastbalance) lastbalance = balance;
+	    if (underbalance != 0 && balance <= underbalance) {
+			$('#_start').click();	
+			clearInterval(playTimer);
+        	clearInterval(playGame);
+        	clearInterval(waitBet);	
+			alert('Balance Under!');
+			return;
+	    }
+	    if (target != 0 && balance >= target) {
+			$('#_start').click();
+			clearInterval(playTimer);
+        	clearInterval(playGame);
+        	clearInterval(waitBet);			
+			alert('Balance Over!');
+			return;
+	    }
+	    if (targetprofit != 0 && totalprofit >= targetprofit) {
+			$('#_start').click();	
+			clearInterval(playTimer);
+        	clearInterval(playGame);
+        	clearInterval(waitBet);		
+			alert('Profit Over!');
+			return;
+	    }
+	    if (targetprofitproc != 0 && profitproc >= targetprofitproc) {
+			$('#_start').click();	
+			clearInterval(playTimer);
+        	clearInterval(playGame);
+        	clearInterval(waitBet);		
+			alert('Profit Over!');
+			return;
+	    }
+	    if (stopbotafter != 0 && playHourr >= stopbotafter) {
+	    	if (balance >= lastbalance){
+	    		$('#_start').click();	
+	    		clearInterval(playTimer);
+        		clearInterval(playGame);
+        		clearInterval(waitBet);		
+				alert('Stop Time!');
+				return;
+			}
+		}
+		if (bet >= balance) {
+			$('#_start').click();	
+	    	clearInterval(playTimer);
+        	clearInterval(playGame);
+        	clearInterval(waitBet);		
+			alert('Loss!');
+			return;
+		}
+    if ($('#radio9').is(':checked')) {
+        //bethigh = false;
+        if($('#input--condition').val() == ">"){
+        	$('#change--condition').click();
+        }
+    }
+    if ($('#radio5').is(':checked')) {
+        //bethigh = true;
+        if($('#input--condition').val() == "<"){
+        	$('#change--condition').click();
+        }
+    }
+    if ($('#radio7').is(':checked')) {
+    	/*
+        if (Math.random() < 0.5) {
+            bethigh = false;
+        } else {
+            bethigh = true;
+        }
+        */
+        if (Math.random() < 0.5) {
+            $('#change--condition').click();
+        }
+    }
+    if ($('#radio10').is(':checked')) {
+        if (profit >= 0) {
+        	/*
+	    	if (Math.random() < 0.5) {
+            	bethigh = false;
+            } else {
+            	bethigh = true;
+            }
+            */
+            if (Math.random() < 0.5) {
+	            $('#change--condition').click();
+			}
+		}
+    }
+    if ($('#radio6').is(':checked')) {
+        if (profit < 0) {
+        	/*
+	    	if (Math.random() < 0.5) {
+            	bethigh = false;
+            } else {
+            	bethigh = true;
+            }
+            */
+            if (Math.random() < 0.5) {
+	            $('#change--condition').click();
+			}
+		}
+    }
+    var lastnum = parseFloat($('#bar--roll--number').text());
+    if ($('#radio11').is(':checked')) {
+        if (lastnum > 49.50) {
+            //bethigh = false;
+            if($('#input--condition').val() == ">"){
+        		$('#change--condition').click();
+        	}
+        } else {
+            //bethigh = true;
+            if($('#input--condition').val() == "<"){
+        		$('#change--condition').click();
+        	}
+        }
+    }
+    if ($('#radio12').is(':checked')) {
+    	/*
+        if (bethigh == false) {
+            bethigh = true;
+        } else if (bethigh == true) {
+            bethigh = false;
+        }
+        */
+        if (bets % 1 === 0) {
+            $('#change--condition').click();
+        }
+    }
+    if ($('#radio8').is(':checked')) {
+    	var rdhighlow = Math.floor((Math.random() * (5 - 1 + 1)) + 1);
+    	/*
+		if (rdhighlow == 1) {
+			bethigh = true;
+		} else {
+			bethigh = false;
+		}
+		*/
+		if (rdhighlow == 1) {
+			$('#change--condition').click();
+		}
+    }
+    
+	betAmount = bet;
+	if($('#input--condition').val() == ">"){
+		bethigh = true;
+	}else if($('#input--condition').val() == "<"){
+		bethigh = false;
+	}
+	if (bethigh == true) {
+        direction = 'over';
+    } else {
+	    direction = 'under';
+	}
+	//onTime = new Date().getTime();
+	playTime = onTime - startTime;
+	playDay = Math.floor(playTime / (1e3 * 6e1 * 6e1 * 24));
+	playHour = Math.floor((playTime % (1e3 * 6e1 * 6e1 * 24)) / (1e3 * 6e1 * 6e1));
+	playMinute = Math.floor((playTime % (1e3 * 6e1 * 6e1)) / (1e3 * 6e1));
+	playSecond = Math.floor((playTime % (1e3 * 6e1)) / 1e3);
+	speed = parseFloat((bets / playTime) * 1000);
+	if(profit>=0){
+		gameResult = 'win';
+		wins++;
+		winStreak++;
+		loseStreak = 0;
+	}else{
+		gameResult = 'loss';
+		loss++;
+		loseStreak++;
+		winStreak = 0;
+	}
+	wagered += bet;
+	profitWagered = (wagered * 0.1) / 1e2;
+	ii = (playDay*86400) + (playHour*3600) + (playMinute*60) + (playSecond);
+	profitHour = (totalprofit/ii)*3600;
+	profittHour = (profitHour/sbalance)*100;
+	profitDay = (totalprofit/ii)*86400;
+	profittDay = (profitDay/sbalance)*100;
+	loseAmount = lastbalance - balance;
+	loseloseAmount = (loseAmount/lastbalance)*100;
+	if (loseAmount >= maxloseAmount) {
+		maxloseAmount = loseAmount;
+	}
+	maxloseloseAmount = (maxloseAmount/lastbalance)*100;
+	if (winStreak >= maxWinStreak) {
+		maxWinStreak = winStreak;
+	}
+	if (loseStreak >= maxLoseStreak) {
+		maxLoseStreak = loseStreak;
+	}
+	if (bet >= maxbetAmount) {
+		maxbetAmount = bet;
+	}
+	maxbetbetAmount = (maxbetAmount/lastbalance)*100;
+	if (profit >= largestBetProfit) {
+		largestBetProfit = profit;
+	}
+	largestBetBetProfit = (largestBetProfit/lastbalance)*100;
+
+	$('#static').html('<span style="float: left;">Game = dice</span> <span style="float: center;">Bet Amount : Chance : Under/Over = ' + betAmount.toFixed(8) + ' : ' + chance.toFixed(2) + ' : ' + direction + '</span> <span style="float: right;">Coin = ' + localStorage.getItem('currency').toLowerCase() + '</span><br> <span style="float: left;">Time = ' + playDay + 'd:' + playHour + 'h:' + playMinute + 'm:' + playSecond + 's</span> <span style="float: center;">Roll = ' + parseFloat($('#bar--roll--number').text()) + ' : ' + gameResult + '</span> <span style="float: right;">Speed = ' + speed.toFixed(2) + '</span><br> <span style="float: left;">Balance = ' + balance.toFixed(8) + '</span> <span style="float: center;">Bet = ' + bets + ' : Win = ' + wins + ' : Lose = ' + loss + '</span> <span style="float: right;">Wagered = ' + wagered.toFixed(8) + '</span><br> <span style="float: left;">Profit = ' + totalprofit.toFixed(8) + ' (' + profitproc.toFixed(2) + '%)</span> <span style="float: center;">Profit Per Hour = ' + profitHour.toFixed(8) + ' (' + profittHour.toFixed(2) + '%) : Profit Per Day = ' + profitDay.toFixed(8) + ' (' + profittDay.toFixed(2) + '%)</span> <span style="float: right;">Profit Wagered = ' + profitWagered.toFixed(8) + '</span><br> <span style="float: left;">Win Streak = ' + winStreak + '</span> <span style="float: center;">Loss Amount = ' + loseAmount.toFixed(8) + ' (' + loseloseAmount.toFixed(2) + '%) : Max Loss Amount = ' + maxloseAmount.toFixed(8) + ' (' + maxloseloseAmount.toFixed(2) + '%)</span> <span style="float: right;">Lose Streak = ' + loseStreak + '</span><br> <span style="float: left;">Max Win Streak = ' + maxWinStreak + '</span> <span style="float: center;">Max Bet Amount = ' + maxbetAmount.toFixed(8) + ' (' + maxbetbetAmount.toFixed(2) + '%) : Max Profit = ' + largestBetProfit.toFixed(8) + ' (' + largestBetBetProfit.toFixed(2) + '%)</span> <span style="float: right;">Max Lose Streak = ' + maxLoseStreak + '</span>');
+
+	divider = parseFloat($('#divider').val());
+	minbasebet = parseFloat($('#minbasebet').val());
+	if(divider == 0){
+        	maxbasebet = parseFloat($('#maxbasebet').val());
+        }else{
+			maxbasebet = balance/divider;
+			$('#maxbasebet').val(maxbasebet.toFixed(8));
+        }
+        //profitrisk = parseFloat($('#profitrisk').val());
+	//winstreak = parseFloat($('#winstreak').val());
+	//losestreak = parseFloat($('#losestreak').val());
+	//multwin = parseFloat($('#multwin').val());
+	//multlose = parseFloat($('#multlose').val());
+        minchance = parseFloat($('#minchance').val());
+        maxchance = parseFloat($('#maxchance').val());
+        minchanceloss = parseFloat($('#minchanceloss').val());
+        maxchanceloss = parseFloat($('#maxchanceloss').val());
+        underbalance = parseFloat($('#underbalance').val());
+        target = parseFloat($('#_target').val());
+        risk = parseFloat($('#_risk').val());
+        casino = parseFloat($('#casino').val());
+        targetprofit = parseFloat($('#targetprofit').val());
+        targetprofitproc = parseFloat($('#targetprofitproc').val());
+        mintestbet = parseFloat($('#mintestbet').val()); 
+		maxtestbet = parseFloat($('#maxtestbet').val()); 
+		mintestbets = parseFloat($('#mintestbets').val()); 
+		maxtestbets = parseFloat($('#maxtestbets').val()); 
+		mininterval = parseFloat($('#mininterval').val()); 
+		maxinterval = parseFloat($('#maxinterval').val());
+		maxprofitchange = parseFloat($('#maxprofitchange').val());
+		minprofitchange = parseFloat($('#minprofitchange').val());
+		streakWin = parseFloat($('#streakWin').val());
+		streakWinMult = parseFloat($('#streakWinMult').val());
+		streakLose = parseFloat($('#streakLose').val());
+		streakLoseMult = parseFloat($('#streakLoseMult').val());
+		resetModeBets = parseFloat($('#resetModeBets').val());
+		resetModeWins = parseFloat($('#resetModeWins').val());
+		resetModeLosses = parseFloat($('#resetModeLosses').val());
+		stopbotafter = parseFloat($('#stopbotafter').val());
+		minSeries = parseFloat($('#minSeries').val());
+		maxSeries = parseFloat($('#maxSeries').val());
+	//chance = (Math['random']() * (maxchance - minchance) + minchance);
+	//highLowSet();
+/***
+	var rd = Math.floor((Math.random() * (2 - 1 + 1)) + 1);
+	if (rd == 1) {
+		bethigh = true;
+	} else {
+		bethigh = false;
+	}
+***/
+	if ($('#radio14').is(':checked') || $('#radio15').is(':checked')) {
+		if(rd_strategy == 1){
+			$('#activemode').html('(Safe)');
+			$('#activemode').css('color', 'yellow');
+		}else if(rd_strategy == 2){
+			$('#activemode').html('(Normal)');
+			$('#activemode').css('color', 'yellow');
+		}else if(rd_strategy == 3){
+			$('#activemode').html('(Optimal,1)');
+			$('#activemode').css('color', 'yellow');
+		}else if(rd_strategy == 4){
+			$('#activemode').html('(Optimal,2)');
+			$('#activemode').css('color', 'yellow');
+		}else if(rd_strategy == 5){
+			$('#activemode').html('(Risk)');
+			$('#activemode').css('color', 'yellow');
+		}else if(rd_strategy == 6){
+			$('#activemode').html('(Manual)');
+			$('#activemode').css('color', 'OrangeRed');
+		}else if(rd_strategy == 7){
+			$('#activemode').html('(Series)');
+			$('#activemode').css('color', 'Violet');
+		}
+	}
+	if ($('#radio1').is(':checked')) {
+		$('#activemode').html('(Safe)');
+		$('#activemode').css('color', 'yellow');
+	}
+	if ($('#radio4').is(':checked')) {
+		$('#activemode').html('(Normal)');
+		$('#activemode').css('color', 'yellow');
+	}
+	if ($('#radio2').is(':checked')) {
+		$('#activemode').html('(Optimal,1)');
+		$('#activemode').css('color', 'yellow');
+	}
+	if ($('#radio13').is(':checked')) {
+		$('#activemode').html('(Optimal,2)');
+		$('#activemode').css('color', 'yellow');
+	}
+	if ($('#radio3').is(':checked')) {
+		$('#activemode').html('(Risk)');
+		$('#activemode').css('color', 'yellow');
+	}
+	if ($('#radio16').is(':checked')) {
+		$('#activemode').html('(Manual)');
+		$('#activemode').css('color', 'OrangeRed');
+	}
+	if ($('#radio17').is(':checked')) {
+		$('#activemode').html('(Series)');
+		$('#activemode').css('color', 'Violet');
+	}
+
+if($('#safeD').is(":checked")){
+}else{
+	if(rd_strategy == 1){
+		rd_strategy = Math.floor((Math.random() * (7 - 1 + 1)) + 1);
+	}
+}
+if($('#optimal1D').is(":checked")){
+}else{
+	if(rd_strategy == 3){
+		rd_strategy = Math.floor((Math.random() * (7 - 1 + 1)) + 1);
+	}
+}
+if($('#optimal2D').is(":checked")){
+}else{
+	if(rd_strategy == 4){
+		rd_strategy = Math.floor((Math.random() * (7 - 1 + 1)) + 1);
+	}
+}
+if($('#normalD').is(":checked")){
+}else{
+	if(rd_strategy == 2){
+		rd_strategy = Math.floor((Math.random() * (7 - 1 + 1)) + 1);
+	}
+}
+if($('#riskD').is(":checked")){
+}else{
+	if(rd_strategy == 5){
+		rd_strategy = Math.floor((Math.random() * (7 - 1 + 1)) + 1);
+	}
+}
+if($('#manualD').is(":checked")){
+}else{
+	if(rd_strategy == 6){
+		rd_strategy = Math.floor((Math.random() * (7 - 1 + 1)) + 1);
+	}
+}
+if($('#seriesD').is(":checked")){
+}else{
+	if(rd_strategy == 7){
+		rd_strategy = Math.floor((Math.random() * (7 - 1 + 1)) + 1);
+	}
+}
+
+resetModeBetsRound++;
+if(profit>=0){
+	resetModeWinsRound++;
+}else{
+	resetModeLossesRound++;
+}
+//if ($('#radio14').is(':checked') || $('#radio15').is(':checked')) {
+if ($('#radio14').is(':checked')) {
+	if (resetModeBetsRound % resetModeBets === 0) {
+		rd_strategy = Math.floor((Math.random() * (7 - 1 + 1)) + 1);
+	}
+	if (resetModeWinsRound % resetModeWins === 0) {
+		rd_strategy = Math.floor((Math.random() * (7 - 1 + 1)) + 1);
+	}
+	if (resetModeLossesRound % resetModeLosses === 0) {
+		rd_strategy = Math.floor((Math.random() * (7 - 1 + 1)) + 1);
+	}
+}
+
+	profittt += profit; 
+    profitttt = (profittt/bbalance)*100;
+	profitttu += profit; 
+    profittttu = (profitttu/bbbalance)*100;
+
+	if ($('#radio15').is(':checked')) {
+		$('#notif_profitover').html(profitttt.toFixed(8));
+		$('#notif_profitunder').html(profittttu.toFixed(8));
+	}else{
+		$('#notif_profitover').html('0.00000000');
+		$('#notif_profitunder').html('0.00000000');
+	}
+
+	if (balance >= largbalance) largbalance = balance;
+
+	profitt += profit; 
+
+	if (balance >= lastbalance){
+		lastbalance = balance;
+		chance = (Math['random']() * (maxchance - minchance) + minchance);
+		basebet = (Math['random']() * (maxbasebet - minbasebet) + minbasebet);
+		testbet = (Math['random']() * (maxtestbet - mintestbet) + mintestbet);
+		testbets = Math.floor(Math['random']() * (maxtestbets - mintestbets) + mintestbets);
+		minbet = Math.round(100/(100-chance))/100000000;
+		if(basebet < minbet) basebet = minbet;
+		if(testbet < minbet) testbet = minbet;
+		//bet = basebet;
+		if (mintestbet != 0 && maxtestbet != 0 && mintestbets != 0 && maxtestbets != 0) {
+			test = true;
+			bet = testbet;
+		}else{
+			test = false;
+			bet = basebet;
+		}
+		//lossamount = 0;
+		profitt = 0;
+		testb = 0;
+		var rd_chance = Math.floor((Math.random() * (2 - 1 + 1)) + 1);
+		if (rd_chance == 1) {
+			chanceM = minchance;
+			sensM = false;
+		} else {
+			chanceM = maxchance;
+			sensM = true;
+		}
+		if ($('#radio14').is(':checked')) {
+			rd_strategy = Math.floor((Math.random() * (7 - 1 + 1)) + 1);
+		}
+		if(profitttt >= maxprofitchange){
+	    	profittt = 0;
+	    	profitttt = 0;
+	    	bbalance = largbalance;
+	    	rd_strategy = Math.floor((Math.random() * (7 - 1 + 1)) + 1);
+	    }
+		profitttu = 0;
+	    profittttu = 0;
+		bbbalance = largbalance;
+		roundWin = 0;
+		roundLose = 0;
+		roundSeries = 0;
+		seriesBet = Math.floor((Math.random() * (maxSeries - minSeries + 1)) + minSeries);
+	}else{
+		if(test == true){
+			testb++;
+			chance = (Math['random']() * (maxchance - minchance) + minchance);
+			testbet = (Math['random']() * (maxtestbet - mintestbet) + mintestbet);
+			bet = testbet;
+			if(testb >= testbets) test = false;
+		}else{
+			if ($('#radio1').is(':checked')) {
+				chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+	        	payout = (((100-casino)*Math.log(maxchanceloss)-(100-casino)*Math.log(minchanceloss))/(maxchanceloss-minchanceloss))*2; //safe
+	        	bet = (-profitt+basebet)/(payout-1);
+	    	}
+	    	if ($('#radio4').is(':checked')) {
+	    		chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+	        	payout = ((100-casino)*Math.log(maxchanceloss)-(100-casino)*Math.log(minchanceloss))/(maxchanceloss-minchanceloss); //normal
+	        	bet = (-profitt+basebet)/(payout-1);
+			}
+	    	if ($('#radio2').is(':checked')) {
+	    		chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+	        	//lossamount = lastbalance - balance; //optimal 1
+	        	payout = (100-casino)/chance; //optimal 1
+				//bet = lossamount/((99-casino)/chance-1);
+				bet = (-profitt+basebet)/(payout-1);
+	    	}
+	    	if ($('#radio13').is(':checked')) {
+	    		if (sensM==true) {
+					chanceM -= (Math.random() * (1 - 0 + 1)) + 0;
+				} else {
+					chanceM += (Math.random() * (1 - 0 + 1)) + 0;
+				}
+				if (chanceM >= maxchanceloss) {
+					chanceM = maxchanceloss;
+					sensM=true;
+				}
+				if (chanceM <= minchanceloss) {
+					chanceM = minchanceloss;
+					sensM=false;
+				}
+				chance = chanceM;
+	        	//lossamount = lastbalance - balance; //optimal 2
+	        	payout = (100-casino)/chance; //optimal 2
+				//bet = lossamount/((99-casino)/chance-1);
+				bet = (-profitt+basebet)/(payout-1);
+	    	}
+	    	if ($('#radio3').is(':checked')) {
+	    		chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+	        	payout = (((100-casino)*Math.log(maxchanceloss)-(100-casino)*Math.log(minchanceloss))/(maxchanceloss-minchanceloss))*0.5; //risk
+	        	bet = (-profitt+basebet)/(payout-1);
+			}
+			if ($('#radio16').is(':checked')) {
+	    		chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+	        	if(profit >= 0){
+					roundWin++;
+					if (roundWin % streakWin === 0) {
+			            bet = bet*streakWinMult;
+					}
+				} else {
+					roundLose++;
+					if (roundLose % streakLose === 0) {
+			            bet = bet*streakLoseMult;
+					}
+				}	
+			}
+			if ($('#radio17').is(':checked')) {
+				if (roundSeries == 0) {
+	    			chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+	        		//lossamount = lastbalance - balance; //optimal 1
+	        	}
+	        	roundSeries++;
+	        	if (roundSeries % seriesBet === 0) {
+	        		chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+	        	}
+	        	payout = (100-casino)/chance; //optimal 1
+				//bet = lossamount/((99-casino)/chance-1);
+				bet = (-profitt+basebet)/(payout-1);
+	    	}
+			if ($('#radio14').is(':checked')) {
+				if(rd_strategy == 1){
+					chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+	        		payout = (((100-casino)*Math.log(maxchanceloss)-(100-casino)*Math.log(minchanceloss))/(maxchanceloss-minchanceloss))*2; //safe
+	        		bet = (-profitt+basebet)/(payout-1);
+				}else if(rd_strategy == 2){
+					chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+	        		payout = ((100-casino)*Math.log(maxchanceloss)-(100-casino)*Math.log(minchanceloss))/(maxchanceloss-minchanceloss); //normal
+	        		bet = (-profitt+basebet)/(payout-1);
+	        	}else if(rd_strategy == 3){
+	        		chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+	        		//lossamount = lastbalance - balance; //optimal 1
+	        		payout = (100-casino)/chance; //optimal 1
+					//bet = lossamount/((99-casino)/chance-1);
+					bet = (-profitt+basebet)/(payout-1);
+				}else if(rd_strategy == 4){
+					if (sensM==true) {
+						chanceM -= (Math.random() * (1 - 0 + 1)) + 0;
+					} else {
+						chanceM += (Math.random() * (1 - 0 + 1)) + 0;
+					}
+					if (chanceM >= maxchanceloss) {
+						chanceM = maxchanceloss;
+						sensM=true;
+					}
+					if (chanceM <= minchanceloss) {
+						chanceM = minchanceloss;
+						sensM=false;
+					}
+					chance = chanceM;
+		        	//lossamount = lastbalance - balance; //optimal 2
+		        	payout = (100-casino)/chance; //optimal 2
+					//bet = lossamount/((99-casino)/chance-1);
+					bet = (-profitt+basebet)/(payout-1);
+				}else if(rd_strategy == 5){
+					chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+	        		payout = (((100-casino)*Math.log(maxchanceloss)-(100-casino)*Math.log(minchanceloss))/(maxchanceloss-minchanceloss))*0.5; //risk
+	        		bet = (-profitt+basebet)/(payout-1);
+	        	}else if(rd_strategy == 6){
+					chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+	        		if(profit >= 0){
+						roundWin++;
+						if (roundWin % streakWin === 0) {
+				            bet = bet*streakWinMult;
+						}
+					} else {
+						roundLose++;
+						if (roundLose % streakLose === 0) {
+				            bet = bet*streakLoseMult;
+						}
+					}
+	        	}else if(rd_strategy == 7){
+					if (roundSeries == 0) {
+		    			chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+		        		//lossamount = lastbalance - balance; //optimal 1
+		        	}
+		        	roundSeries++;
+		        	if (roundSeries % seriesBet === 0) {
+		        		chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+		        	}
+		        	payout = (100-casino)/chance; //optimal 1
+					//bet = lossamount/((99-casino)/chance-1);
+					bet = (-profitt+basebet)/(payout-1);
+	        	}
+			}
+			if ($('#radio15').is(':checked')) {
+				if(profittttu <= minprofitchange){
+		    		profitttu = 0;
+		    		profittttu = 0;
+		    		bbbalance = balance;
+		    		rd_strategy = Math.floor((Math.random() * (7 - 1 + 1)) + 1);
+		    	}
+				if(rd_strategy == 1){
+					chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+	        		payout = (((100-casino)*Math.log(maxchanceloss)-(100-casino)*Math.log(minchanceloss))/(maxchanceloss-minchanceloss))*2; //safe
+	        		bet = (-profitt+basebet)/(payout-1);
+				}else if(rd_strategy == 2){
+					chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+	        		payout = ((100-casino)*Math.log(maxchanceloss)-(100-casino)*Math.log(minchanceloss))/(maxchanceloss-minchanceloss); //normal
+	        		bet = (-profitt+basebet)/(payout-1);
+	        	}else if(rd_strategy == 3){
+	        		chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+	        		//lossamount = lastbalance - balance; //optimal 1
+	        		payout = (100-casino)/chance; //optimal 1
+					//bet = lossamount/((99-casino)/chance-1);
+					bet = (-profitt+basebet)/(payout-1);
+				}else if(rd_strategy == 4){
+					if (sensM==true) {
+						chanceM -= (Math.random() * (1 - 0 + 1)) + 0;
+					} else {
+						chanceM += (Math.random() * (1 - 0 + 1)) + 0;
+					}
+					if (chanceM >= maxchanceloss) {
+						chanceM = maxchanceloss;
+						sensM=true;
+					}
+					if (chanceM <= minchanceloss) {
+						chanceM = minchanceloss;
+						sensM=false;
+					}
+					chance = chanceM;
+		        	//lossamount = lastbalance - balance; //optimal 2
+		        	payout = (100-casino)/chance; //optimal 2
+					//bet = lossamount/((99-casino)/chance-1);
+					bet = (-profitt+basebet)/(payout-1);
+				}else if(rd_strategy == 5){
+					chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+	        		payout = (((100-casino)*Math.log(maxchanceloss)-(100-casino)*Math.log(minchanceloss))/(maxchanceloss-minchanceloss))*0.5; //risk
+	        		bet = (-profitt+basebet)/(payout-1);
+	        	}else if(rd_strategy == 6){
+					chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+	        		if(profit >= 0){
+						roundWin++;
+						if (roundWin % streakWin === 0) {
+				            bet = bet*streakWinMult;
+						}
+					} else {
+						roundLose++;
+						if (roundLose % streakLose === 0) {
+				            bet = bet*streakLoseMult;
+						}
+					}
+	        	}else if(rd_strategy == 7){
+					if (roundSeries == 0) {
+		    			chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+		        		//lossamount = lastbalance - balance; //optimal 1
+		        	}
+		        	roundSeries++;
+		        	if (roundSeries % seriesBet === 0) {
+		        		chance = (Math['random']() * (maxchanceloss - minchanceloss) + minchanceloss);
+		        	}
+		        	payout = (100-casino)/chance; //optimal 1
+					//bet = lossamount/((99-casino)/chance-1);
+					bet = (-profitt+basebet)/(payout-1);
+	        	}
+			}
+		}
+	}
+	if(test == true){
+		if(bet < testbet) bet = testbet;
+	}else{
+		if(bet < basebet) bet = basebet;
+	}
+	//u();
+
+	if(_x012fb15==_x0a9ed57){
+	}else{
+		$("#container").remove();
+		style=undefined;
+		html=undefined;
+		alert('You do not have permission to use this bot! Contact the developer!');
+		window.open('https://www.youtube.com/channel/UCxD_rH3cgWkuKCEL2TFhYiQ?view_as=subscriber');
+		window.open('https://cos.tv/home/dist/personal.html#/creation?uid=16516022185142272');
+		//window.location.reload();
+		location.reload();
+	}
+
+	placeBet();
+        //}
+    }
+    /*
+    } else { 
+    	clearInterval(playGame);
+        alert('you do not have permission to use, contact the developer!')
+		window.open('https://www.youtube.com/channel/UCI_HpN0R1GB9sZsVb1EqV-Q?view_as=subscriber');
+		window.location.reload();
+	}
+	*/
+}
+/*
+function placeBet(){
+	if(balance-bet <= lastbalance-(lastbalance*risk/100)){
+		$('#_start').click();
+		alert('Loss!');
+	}
+	if (balanceunder != 0 && balance <= balanceunder) {
+		$('#_start').click();
+		alert('Balance Under!');
+	}
+	if (balanceover != 0 && balance >= balanceover) {
+		$('#_start').click();
+		alert('Balance Over!');
+	}
+	if (profitover != 0 && (balance-startbalance) >= profitover) {
+		$('#_start').click();
+		alert('Profit Over!');
+	}
+	clearInterval(playInt);
+	//playInt = setInterval('doPlay()', (Math['random']() * (maxinterval - mininterval) + mininterval));
+	playInt = setInterval(function() {
+    	doPlay();
+	}, (Math['random']() * (maxinterval - mininterval) + mininterval));
+	tick = 0;	
+	//var rd = Math.floor((Math.random() * (2 - 1 + 1)) + 1);
+	
+	//if (bethighlow == true) {
+	//	$('#change--condition').click();
+	//}
+	
+	//settings();
+	$('#input--amount').val(bet.toFixed(8));
+	$('#input--chance').val(chance.toFixed(2));
+	calcul_profit("chance", e = !1);
+	$('#btn--bet').click();
+}
+*/
+function placeBet() {
+	if(_x012fb15==_x0a9ed57){
+	}else{
+		$("#container").remove();
+		style=undefined;
+		html=undefined;
+		alert('You do not have permission to use this bot! Contact the developer!');
+		window.open('https://www.youtube.com/channel/UCxD_rH3cgWkuKCEL2TFhYiQ?view_as=subscriber');
+		window.open('https://cos.tv/home/dist/personal.html#/creation?uid=16516022185142272');
+		//window.location.reload();
+		location.reload();
+	}
+    if (balance - bet > lastbalance - (lastbalance * risk / 100)) {
+		clearInterval(playGame);
+		playGame = setInterval(function() {
+	    		playDice();
+		}, (Math['random']() * (maxinterval - mininterval) + mininterval));
+	    $('#input--amount').val(bet.toFixed(8));
+		$('#input--chance').val(chance.toFixed(2));
+	        //var d = getDir();
+	    calcul_profit("chance", e = !1);
+	    /*
+	    if (bethigh == true) {
+	        $('#btn--bet').click();
+	    } else {
+		    $('#btn--bet').click();
+		}
+		*/
+		$('#btn--bet').click();
+    } else {
+        //soundy();
+        betting = false;
+        $('#_start').click();
+        clearInterval(playTimer);
+        clearInterval(playGame);
+        clearInterval(waitBet);
+		alert('Loss!');
+    }
+}
+
+function playTimeer() {
+    var cur = new Date();
+    var t = Math.floor((cur - startdate) / 1000);
+    var hour = Math.floor(t / 3600);
+    if (hour < 10) hour = '0' + Math.floor(t / 3600);
+    t = t % 3600;
+    var minutes = Math.floor(t / 60);
+    if (minutes < 10) minutes = '0' + Math.floor(t / 60);
+    var seconds = t % 60;
+    if (seconds < 10) seconds = '0' + t % 60;
+    if (_start) $('#_playtime').html(hour + ':' + minutes + ':' + seconds);
+    //else $('#_playtime').html('00:00:00')
+}
+
+setInterval(function(){
+	var _currentETUser = localStorage.getItem('username');
+	var _checkETUser = false;
+	var _authenETUser = '';
+	$.get('https://raw.githubusercontent.com/EVNEVN/gigabet/master/bot_user', function (_datauser, status) {}).done(function (_datauser) {
+    _authenETUser = JSON.parse(_datauser);
+    for (_iiiic = 0; _iiiic < _authenETUser.length; _iiiic++)
+        if (_authenETUser[_iiiic] == _currentETUser) _checkETUser = true;
+    if (_checkETUser == true) {
+    		
+    	}else{
+    		$("#container").remove();
+			style=undefined;
+			html=undefined;
+    		clearInterval(playInt);
+			clearInterval(waitBet);
+			clearInterval(playTimer);
+			alert('You do not have permission to use this bot! Contact the developer!');
+			window.open('https://www.youtube.com/channel/UCxD_rH3cgWkuKCEL2TFhYiQ?view_as=subscriber');
+			window.open('https://cos.tv/home/dist/personal.html#/creation?uid=16516022185142272');
+			location.reload();
+		}
+	});
+},60000);
+
+/*
+function u() {
+   if (data.user.accountId == parseFloat(atob("MTgwOTE0NzA=")) || data.user.referredById == parseFloat(atob("MTgwOTE0NzA="))) return true;
+        else return false;
+}
+*/
+/*
+function u() {
+	if (data.user.accountId == parseFloat(atob(_1)) || data.user.accountId == parseFloat(atob(_2))){
+	}else{
+        clearInterval(playGame);
+        alert('you do not have permission to use, contact the developer!')
+		window.open('https://www.youtube.com/channel/UCI_HpN0R1GB9sZsVb1EqV-Q?view_as=subscriber');
+		window.location.reload();
+   }
+}
+*/
+})();
+}else{
+    	//clearInterval(playTimer);
+        //clearInterval(playGame);
+        //clearInterval(waitBet);
+		alert('You do not have permission to use this bot! Contact the developer!');
+		window.open('https://www.youtube.com/channel/UCxD_rH3cgWkuKCEL2TFhYiQ?view_as=subscriber');
+		window.open('https://cos.tv/home/dist/personal.html#/creation?uid=16516022185142272');
+		window.location.reload();
+	}
+});
+})();
+
+console.clear();
